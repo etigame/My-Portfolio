@@ -74,6 +74,7 @@ function renderProjModal(projID) {
                   <ul class="list-inline">
                     <li>Date: ${proj.publishedAt}</li>
                   </ul>
+                  <a class="btn btn-info d-block d-grid col-4 mx-auto mb-4" href="${proj.url}" target="_blank" role="button">Check it Out!</a>
                   <button
                     class="btn btn-primary"
                     data-dismiss="modal"
