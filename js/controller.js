@@ -26,7 +26,7 @@ function renderProjs() {
           </div>
           <img
             class="img-fluid"
-            src="img/${proj.id}.png"
+            src="img/portfolio/${proj.id}.jpg"
             alt=""
           />
         </a>
@@ -69,7 +69,8 @@ function renderProjModal(projID) {
                   <p class="item-intro text-muted">${proj.title}</p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/${proj.id}.png"
+                    src="img/portfolio/${proj.id}.jpg
+    "
                     alt=""
                   />
                   <p>${proj.desc}</p>
