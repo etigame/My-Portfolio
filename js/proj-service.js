@@ -39,7 +39,7 @@ function _createProjs() {
        },
        {id: 'todoApp',
         name: 'TODO App',
-        title: 'Create, Plan. Organize.',
+        title: 'Create. Plan. Organize.',
         desc: 'Productivity platform aimed at task and project management.',
         url: 'https://etigame.github.io/TODO-App/',
         publishedAt: Date.now(),
@@ -61,39 +61,3 @@ function _createProjs() {
 function getProjs() {
     return gProjs
 }
-
-
-// function _createProj(vendor) {
-//     return {
-//         id: makeId(),
-//         vendor,
-//         maxSpeed: getRandomIntInclusive(50, 250),
-//         desc: makeLorem()
-//     }
-// }
-
-// function addCar(vendor) {
-//     const car = _createCar(vendor)
-//     gCars.unshift(car)
-//     _saveCarsToStorage()
-//     return car
-// }
-
-// function getCarById(carId) {
-//     const car = gCars.find(car => carId === car.id)
-//     return car
-// }
-
-
-
-// function getCars() {
-    
-//     // Filtering:
-//     var cars = gCars.filter(car => car.vendor.includes(gFilterBy.vendor) &&
-//         car.maxSpeed >= gFilterBy.minSpeed)
-
-//     // Paging:
-//     const startIdx = gPageIdx * PAGE_SIZE
-//     cars = cars.slice(startIdx, startIdx + PAGE_SIZE)
-//     return cars
-// }
