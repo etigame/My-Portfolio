@@ -38,7 +38,7 @@ function _createProjs() {
         labels: ['keyboard events'],
        },
        {id: 'whatInPicture',
-        name: 'What-In-Picture Game',
+        name: 'What-In-Picture',
         title: 'Do you recognize those places?',
         desc: 'The player tries to recognize beautiful sites from around the world and marks the right answer',
         url: 'https://etigame.github.io/What-In-Picture-Game/',

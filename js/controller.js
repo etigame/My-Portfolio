@@ -1,7 +1,9 @@
 'use strict'
 
 $(document).ready(onInitPage)
-// $('.portfolio-link').click(renderModal)
+$('.send-mail').click(() => {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=etim139@gmail.com&su=${$('.email-subject').val()}&body=${$('.email-body').val()}`, 'mailTab')
+})
 
 function onInitPage() {
   renderProjs()
@@ -24,13 +26,13 @@ function renderProjs() {
           </div>
           <img
             class="img-fluid"
-            src="img/portfolio/01-thumbnail.jpg"
+            src="img/${proj.id}.png"
             alt=""
           />
         </a>
         <div class="portfolio-caption">
           <h4>${proj.name}</h4>
-          <p class="text-muted">${proj.title}</p>
+          <p class="text-muted mt-3">${proj.title}</p>
         </div>
       </div>`
   )
@@ -67,12 +69,12 @@ function renderProjModal(projID) {
                   <p class="item-intro text-muted">${proj.title}</p>
                   <img
                     class="img-fluid d-block mx-auto"
-                    src="img/portfolio/01-full.jpg"
+                    src="img/${proj.id}.png"
                     alt=""
                   />
                   <p>${proj.desc}</p>
                   <ul class="list-inline">
-                    <li>Date: ${proj.publishedAt}</li>
+                    <li>Published Date: ${new Date(proj.publishedAt).toDateString()}</li>
                   </ul>
                   <a class="btn btn-info d-block d-grid col-4 mx-auto mb-4" href="${proj.url}" target="_blank" role="button">Check it Out!</a>
                   <button
