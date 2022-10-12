@@ -58,6 +58,10 @@ function _createProjs() {
     gProjs = projs
 }
 
+function getProjs() {
+    return gProjs
+}
+
 
 // function _createProj(vendor) {
 //     return {
