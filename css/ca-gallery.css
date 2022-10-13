@@ -787,3 +787,9 @@ fieldset[disabled] .btn-xl:hover {
 img.me {
   object-fit: cover;
 }
+
+.img-fluid {
+  object-fit: cover;
+  height: 140px;
+  width: 100%;
+}
