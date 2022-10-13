@@ -1,15 +1,15 @@
 'use strict'
 
-$(document).ready(onInitPage)
+$(document).ready(_onInitPage)
 $('.send-mail').click(() => {
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=etim139@gmail.com&su=${$('.email-subject').val()}&body=${$('.email-body').val()}`, 'mailTab')
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=etim139@gmail.com&su=${$('.email-subject').val()}&body=${$('.email-body').val()} %0AThis mail was sent from ${$('.email-address').val()}`, 'mailTab') // '%0A' for new-line in URL
 })
 
-function onInitPage() {
-  renderProjs()
+function _onInitPage() {
+  _renderProjs()
 }
 
-function renderProjs() {
+function _renderProjs() {
   var projs = getProjs()
 
   var strHTMLs = projs.map(
@@ -17,7 +17,7 @@ function renderProjs() {
       `<div class="col-md-4 col-sm-6 portfolio-item">
         <a class="portfolio-link"
           data-toggle="modal"
-          href="#portfolioModal" onclick="renderProjModal('${proj.id}')"
+          href="#portfolioModal" onclick="renderProjModal('${proj.id}')" 
         >
           <div class="portfolio-hover">
             <div class="portfolio-hover-content">
@@ -40,7 +40,7 @@ function renderProjs() {
   $('.grid-items').html(strHTMLs.join(''))
 }
 
-function renderProjModal(projID) {
+function _renderProjModal(projID) {
   var projs = getProjs()
 
   var proj = projs.find((proj) => proj.id === projID)
